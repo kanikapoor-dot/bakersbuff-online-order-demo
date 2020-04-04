@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="icon">
+            <img src="bakersandbuff.png" alt="icon">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="firstcontain">
+        <div class="adcontainer">
+            <img class="adimg" src="bur1.jpg">
+            <img class="adimg" src="bur2.jpg">
+            <img class="adimg" src="bur3.jpg">
+        </div>
+        <div class="signup" >
+            <form>
+                <legend>SIGN UP</legend>
+                <input type="text" placeholder="abc@gmail.com" name="emailid">
+                <br><br>
+                <input type="password" placeholder="*******" name="password">
+                <br><br>
+                <input type="tel" placeholder="95864-56635" pattern="[0-9]{5}-[0-9]{5}" required>
+                <br><br>
+                <input type="submit" name="signup" value="Sign up">           
+            </form>            
+        </div> 
+    </div>
+   
+    <div class="secondcontain">
+        <div class="col-15">
+            <div class="categoryMenu">
+                <h2>Menu</h2>
+                <hr>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="burger">Burger</input>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="pizza">Pizza</input>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="beverage">Beverages</input>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="sawarma">Sawarma</input>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-85">
+            <div class="priceMenu">
+                <div class="card">
+                    <img src="bur5.jpg" alt="bur1" width="600" height="400">
+                    <div class="desc">
+                        <h3>Double ham cheese burger</h3>
+                        <h4>Rs. 150.45</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="bur6.jpg" alt="bur2" width="600" height="400">
+                    <div class="desc">
+                        <h3>Beef ham burger</h3>
+                        <h4>Rs. 250.56</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="piz1.jpg" alt="piz1" width="600" height="400">
+                    <div class="desc">
+                        <h3>Double Cheese pizza</h3>
+                        <h4>Rs. 350.99</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="piz2.jpg" alt="piz2" width="600" height="400">
+                    <div class="desc">
+                        <h3>peppironi pizza</h3>
+                        <h4>Rs. 350.99</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="bev1.jpg" alt="bev1" width="600" height="400">
+                    <div class="desc">
+                        <h3>Fanta Tin</h3>
+                        <h4>Rs. 39.0</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="bev2.jpg" alt="bev2" width="600" height="400">
+                    <div class="desc">
+                        <h3>Coke Tin</h3>
+                        <h4>Rs. 39.0</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer" id="about">
+        <div class="cus">
+            <ul>
+                <li>customer support:</li>
+                <li>Email:bakersbuff@gmail.com</li>
+                <li>ph: 95555-85555</li>
+            </ul>
+        </div>
+        <div class="add">
+            <address>
+                Address:<br>
+                New Port Road,<br>
+                North park,<br>
+                Toronto. 
+            </address>
+        </div>       
+        <br><br><br><br><br><br>
+        <p>&copy; copyrighted</p>
+    </div>
+    
+
+    <script>
+        var slide = 0;
+        slideChanger();
+
+        function slideChanger() {
+            var i;
+            var x = document.getElementsByClassName("adimg");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slide++;
+            if (slide > x.length) {
+                slide = 1;
+            }
+            x[slide-1].style.display = "block";
+            setTimeout(slideChanger,3000);
+        }
+
+    </script>
+</body>
+</html>
